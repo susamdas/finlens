@@ -1,0 +1,141 @@
+import type { DatasetMeta, ObservationPack } from '@/data/types'
+
+/** Tiny synthetic dataset for repository tests (not Findex values). */
+export const META: DatasetMeta = {
+  schemaVersion: 1,
+  source: {
+    name: 'Test',
+    edition: 'Test',
+    file: 'test.xlsx',
+    release: null,
+    url: '',
+    methodologyUrl: '',
+    termsUrl: '',
+    citation: '',
+  },
+  builtAt: '2026-01-01T00:00:00.000Z',
+  waves: [2011, 2014, 2017, 2021, 2024],
+  coverage: {},
+  notes: [],
+  updates: [],
+  regions: [
+    {
+      id: 'SAS',
+      slug: 'south-asia',
+      name: 'South Asia',
+      aggregateCode: 'SAS',
+      excludesHighIncome: true,
+      economies: 1,
+    },
+  ],
+  incomeGroups: [
+    {
+      id: 'LMC',
+      slug: 'lower-middle-income',
+      name: 'Lower middle income',
+      order: 2,
+      aggregateCode: 'LMC',
+      economies: 1,
+    },
+  ],
+  groups: [],
+  breakdowns: [
+    { id: 'sex', label: 'Sex', advantaged: 'men', disadvantaged: 'women', gapLabel: 'Gender gap' },
+    {
+      id: 'income',
+      label: 'Income',
+      advantaged: 'richest60',
+      disadvantaged: 'poorest40',
+      gapLabel: 'Income gap',
+    },
+  ],
+  entities: [
+    {
+      code: 'AAA',
+      name: 'Alpha',
+      shortName: 'Alpha',
+      slug: 'alpha',
+      kind: 'economy',
+      iso2: 'AA',
+      regionId: 'SAS',
+      incomeGroupId: 'LMC',
+    },
+    {
+      code: 'SAS',
+      name: 'South Asia',
+      shortName: 'South Asia',
+      slug: 'south-asia',
+      kind: 'region',
+      iso2: null,
+      regionId: null,
+      incomeGroupId: null,
+    },
+    {
+      code: 'LMC',
+      name: 'Lower middle income',
+      shortName: 'Lower middle income',
+      slug: 'lower-middle-income',
+      kind: 'income',
+      iso2: null,
+      regionId: null,
+      incomeGroupId: null,
+    },
+    {
+      code: 'WLD',
+      name: 'World',
+      shortName: 'World',
+      slug: 'world',
+      kind: 'world',
+      iso2: null,
+      regionId: null,
+      incomeGroupId: null,
+    },
+  ],
+  populations: { AAA: { '2024': 1000 } },
+  surveyYears: { AAA: { '2021': 2022 } },
+  indicators: [
+    {
+      id: 'accountOwnership',
+      code: 'account.t.d',
+      label: 'Account',
+      shortLabel: 'Account ownership',
+      unit: '%',
+      unitLabel: '%, age 15+',
+      denominator: 'adults age 15+',
+      definition: '',
+      topic: null,
+      subTopic: null,
+      category: 'access',
+      higherIsBetter: true,
+      aggregation: null,
+      core: true,
+      featured: true,
+      coverage: { firstWave: 2011, lastWave: 2024, values: 4 },
+    },
+  ],
+}
+
+export const CORE: ObservationPack = {
+  schemaVersion: 1,
+  columns: ['accountOwnership'],
+  rows: [
+    ['AAA', 2011, 'all', 30],
+    ['AAA', 2017, 'all', 50],
+    ['AAA', 2021, 'all', 52.8],
+    ['AAA', 2024, 'all', 43.3],
+    ['AAA', 2024, 'men', 48.1],
+    ['AAA', 2024, 'women', 38.6],
+    ['SAS', 2024, 'all', 77.6],
+    ['LMC', 2024, 'all', 70],
+    ['WLD', 2024, 'all', 79],
+  ],
+}
+
+export const GROUPS: ObservationPack = {
+  schemaVersion: 1,
+  columns: ['accountOwnership'],
+  rows: [
+    ['AAA', 2024, 'richest60', 50],
+    ['AAA', 2024, 'poorest40', 33.25],
+  ],
+}

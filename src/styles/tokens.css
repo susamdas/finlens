@@ -1,0 +1,163 @@
+/*
+ * FinLens design tokens.
+ *
+ * - UI tokens follow shadcn/ui names so generated components work unmodified.
+ * - Chart & semantic hexes are VALIDATED (colorblind separation, lightness band, contrast)
+ *   and mirrored in src/design/palette.ts — tests/unit/palette.test.ts keeps them in sync.
+ *   Do not hand-edit one without the other.
+ * - Text-bearing semantic colors meet WCAG AA (≥4.5:1) on both page and card surfaces.
+ */
+
+:root {
+  color-scheme: light;
+  --radius: 0.875rem;
+
+  /* Surfaces & ink */
+  --background: #f6f7f9;
+  --foreground: #0b1324;
+  --card: #ffffff;
+  --card-foreground: #0b1324;
+  --popover: #ffffff;
+  --popover-foreground: #0b1324;
+  --muted: #eef0f3;
+  --muted-foreground: #5b6474;
+  --subtle-foreground: #7a8394; /* icons & decoration only (3.8:1) — not body text */
+  --border: #e3e6eb;
+  --input: #d9dde3;
+
+  /* Brand: deep ink + lens teal */
+  --primary: #0f766e;
+  --primary-foreground: #ffffff;
+  --secondary: #eef2f6;
+  --secondary-foreground: #0b1324;
+  --accent: #e8f5f3;
+  --accent-foreground: #0b4f4a;
+  --destructive: #c42b2b;
+  --ring: #0f766e;
+
+  --sidebar: #ffffff;
+  --sidebar-foreground: #334155;
+  --sidebar-accent: #eef6f5;
+  --sidebar-accent-foreground: #0b4f4a;
+  --sidebar-border: #e3e6eb;
+
+  /* Semantic movement / state (text-safe) */
+  --positive: #067a3a;
+  --positive-soft: #e6f4ec;
+  --negative: #c42b2b;
+  --negative-soft: #fbeaea;
+  --warning: #9a5b00;
+  --warning-soft: #fdf3e1;
+  --neutral: #5b6474;
+  --neutral-soft: #eef0f3;
+  --missing: #b8bdc7;
+  --missing-bg: #f1f2f5;
+
+  /* Categorical chart slots — light steps */
+  --chart-1: #2a78d6;
+  --chart-2: #eb6834;
+  --chart-3: #1baf7a;
+  --chart-4: #eda100;
+  --chart-5: #e87ba4;
+  --chart-6: #008300;
+  --chart-7: #4a3aa7;
+  --chart-8: #e34948;
+
+  /* Sequential (magnitude, e.g. choropleth): low → high */
+  --seq-1: #cde2fb;
+  --seq-2: #9ec5f4;
+  --seq-3: #6da7ec;
+  --seq-4: #3987e5;
+  --seq-5: #256abf;
+  --seq-6: #184f95;
+  --seq-7: #0d366b;
+
+  /* Diverging (polarity, e.g. gender gap, change): negative arm → mid → positive arm */
+  --div-n3: #a3272a;
+  --div-n2: #e34948;
+  --div-n1: #f4a9a3;
+  --div-0: #f0efec;
+  --div-p1: #9ec5f4;
+  --div-p2: #3987e5;
+  --div-p3: #184f95;
+
+  /* Chart chrome */
+  --chart-grid: #e8ebef;
+  --chart-axis: #c5cad3;
+  --chart-label: #5b6474;
+  --chart-highlight: #0b1324;
+}
+
+.dark {
+  color-scheme: dark;
+
+  --background: #0b1120;
+  --foreground: #e8ecf3;
+  --card: #111a2e;
+  --card-foreground: #e8ecf3;
+  --popover: #141e34;
+  --popover-foreground: #e8ecf3;
+  --muted: #1a2438;
+  --muted-foreground: #98a2b3;
+  --subtle-foreground: #7c8698;
+  --border: #212c42;
+  --input: #2a364e;
+
+  --primary: #2dd4bf;
+  --primary-foreground: #0b1324;
+  --secondary: #1a2438;
+  --secondary-foreground: #e8ecf3;
+  --accent: #12302f;
+  --accent-foreground: #99f6e4;
+  --destructive: #f07474;
+  --ring: #2dd4bf;
+
+  --sidebar: #0d1526;
+  --sidebar-foreground: #c3cad6;
+  --sidebar-accent: #13263a;
+  --sidebar-accent-foreground: #99f6e4;
+  --sidebar-border: #1c2639;
+
+  --positive: #34c46e;
+  --positive-soft: #10301f;
+  --negative: #f07474;
+  --negative-soft: #3a1a1f;
+  --warning: #f5b43a;
+  --warning-soft: #33280f;
+  --neutral: #98a2b3;
+  --neutral-soft: #1a2438;
+  --missing: #4a556b;
+  --missing-bg: #161f33;
+
+  /* Categorical chart slots — dark steps (validated against #111a2e) */
+  --chart-1: #3987e5;
+  --chart-2: #d95926;
+  --chart-3: #199e70;
+  --chart-4: #c98500;
+  --chart-5: #d55181;
+  --chart-6: #008300;
+  --chart-7: #9085e9;
+  --chart-8: #e66767;
+
+  /* Sequential flips its anchor on dark: low recedes into the surface, high glows. */
+  --seq-1: #104281;
+  --seq-2: #184f95;
+  --seq-3: #256abf;
+  --seq-4: #3987e5;
+  --seq-5: #6da7ec;
+  --seq-6: #9ec5f4;
+  --seq-7: #cde2fb;
+
+  --div-n3: #f4a9a3;
+  --div-n2: #e66767;
+  --div-n1: #8f3436;
+  --div-0: #2e3647;
+  --div-p1: #1c5cab;
+  --div-p2: #3987e5;
+  --div-p3: #9ec5f4;
+
+  --chart-grid: #1e2940;
+  --chart-axis: #2f3b54;
+  --chart-label: #98a2b3;
+  --chart-highlight: #ffffff;
+}

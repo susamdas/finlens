@@ -1,0 +1,7 @@
+# Netlify: build settings. Headers live in public/_headers, SPA fallback in public/_redirects.
+[build]
+  command = "npm run data:verify && npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"

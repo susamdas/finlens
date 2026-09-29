@@ -1,0 +1,14 @@
+node_modules
+dist
+*.local
+.env
+.env.*
+!.env.example
+coverage
+.DS_Store
+*.tsbuildinfo
+# Raw Findex downloads stay out of git; processed JSON is committed.
+public/data/raw/*
+!public/data/raw/.gitkeep
+playwright-report
+test-results

@@ -1,0 +1,8 @@
+dist
+node_modules
+public/data
+public/geo
+public/flags
+coverage
+playwright-report
+test-results

@@ -1,0 +1,30 @@
+# Netlify and Cloudflare Pages response headers. Keep in sync with vercel.json and deploy/nginx.conf.
+/*
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
+  Cross-Origin-Opener-Policy: same-origin
+
+# Hashed build output never changes under the same name.
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Data files are requested with ?v=<build time>, so a new dataset gets new URLs.
+/data/*
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+
+# meta.json carries that build time, so browsers must always revalidate it.
+/data/processed/meta.json
+  Cache-Control: no-cache
+
+/geo/*
+  Cache-Control: public, max-age=604800
+/flags/*
+  Cache-Control: public, max-age=604800
+
+/index.html
+  Cache-Control: no-cache
+/theme-init.js
+  Cache-Control: no-cache

@@ -1,0 +1,114 @@
+{
+  "builtAt": "2026-09-28T10:29:14.730Z",
+  "source": "GlobalFindexDatabase2025.xlsx",
+  "rowsRead": 8577,
+  "blankRowsSkipped": 11,
+  "recordsWritten": 8577,
+  "economies": 162,
+  "aggregates": 12,
+  "indicators": 430,
+  "emptySeriesOmitted": [
+    "fin38.39b.s",
+    "fin38.39d.s",
+    "fin43a.s",
+    "fin43d.s",
+    "fin13an.s",
+    "fin13bn.s",
+    "fin13cn.s",
+    "fin41.s",
+    "fin35.s",
+    "con3b.s",
+    "con3c.s",
+    "con3d.s",
+    "con3e.s",
+    "con3f.s",
+    "con3g.s",
+    "con6.s",
+    "con7.s",
+    "con12lm.s",
+    "con22.s",
+    "con28n.s",
+    "con31e.s",
+    "con31g.s",
+    "con32b.s",
+    "con32c.s",
+    "con32d.s",
+    "con32e.s",
+    "con32f.s",
+    "con32g.s"
+  ],
+  "coreIndicators": 39,
+  "nonNullValues": 385473,
+  "waves": [
+    2011,
+    2014,
+    2017,
+    2021,
+    2024
+  ],
+  "coverage": {
+    "2011": 144,
+    "2014": 142,
+    "2017": 146,
+    "2021": 139,
+    "2024": 141
+  },
+  "surveyYearRemaps": {
+    "AZE": {
+      "2021": 2022
+    },
+    "BWA": {
+      "2021": 2022
+    },
+    "TCD": {
+      "2021": 2022
+    },
+    "COM": {
+      "2021": 2022
+    },
+    "COD": {
+      "2021": 2022
+    },
+    "SWZ": {
+      "2021": 2022
+    },
+    "ETH": {
+      "2021": 2022
+    },
+    "GMB": {
+      "2021": 2022
+    },
+    "GTM": {
+      "2021": 2022
+    },
+    "LSO": {
+      "2021": 2022
+    },
+    "MDG": {
+      "2021": 2022
+    },
+    "MRT": {
+      "2021": 2022
+    },
+    "MEX": {
+      "2021": 2022
+    },
+    "NER": {
+      "2021": 2022
+    },
+    "VNM": {
+      "2021": 2022
+    },
+    "YEM": {
+      "2021": 2022
+    }
+  },
+  "outOfRange": 0,
+  "notCollectedZeros": {
+    "fin24aP": 42,
+    "fin24aN": 42,
+    "fin10": 42
+  },
+  "warnings": [],
+  "ms": 7773
+}

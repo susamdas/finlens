@@ -1,0 +1,289 @@
+{
+  "$comment": "Curated FinLens indicators. `code` is the Global Findex series code; labels/definitions not given here are taken from the Findex Series Table at build time. Every other Findex series is still available in the full catalogue.",
+  "indicators": [
+    {
+      "id": "accountOwnership",
+      "code": "account.t.d",
+      "shortLabel": "Account ownership",
+      "category": "access",
+      "higherIsBetter": true,
+      "featured": true
+    },
+    {
+      "id": "fiAccount",
+      "code": "fiaccount.t.d",
+      "shortLabel": "Financial institution account",
+      "category": "access",
+      "higherIsBetter": true,
+      "featured": true
+    },
+    {
+      "id": "mobileMoneyAccount",
+      "code": "mobileaccount.t.d",
+      "shortLabel": "Mobile money account",
+      "category": "digital",
+      "higherIsBetter": true,
+      "featured": true
+    },
+    {
+      "id": "debitCard",
+      "code": "fin2.t.d",
+      "shortLabel": "Debit card ownership",
+      "category": "access",
+      "higherIsBetter": true
+    },
+    {
+      "id": "creditCard",
+      "code": "fin10",
+      "shortLabel": "Credit card ownership",
+      "category": "access",
+      "higherIsBetter": true
+    },
+    {
+      "id": "inactiveAccount",
+      "code": "inactive.t.d",
+      "shortLabel": "Inactive account",
+      "category": "access",
+      "higherIsBetter": false
+    },
+    {
+      "id": "mobilePhone",
+      "code": "con1",
+      "shortLabel": "Mobile phone ownership",
+      "category": "connectivity",
+      "higherIsBetter": true
+    },
+    {
+      "id": "internetUse",
+      "code": "internet",
+      "shortLabel": "Internet use",
+      "category": "connectivity",
+      "higherIsBetter": true
+    },
+
+    {
+      "id": "digitalPayments",
+      "code": "g20.any",
+      "shortLabel": "Made or received a digital payment",
+      "category": "digital",
+      "higherIsBetter": true,
+      "featured": true
+    },
+    {
+      "id": "madeDigitalPayment",
+      "code": "g20.made",
+      "shortLabel": "Made a digital payment",
+      "category": "digital",
+      "higherIsBetter": true
+    },
+    {
+      "id": "receivedDigitalPayment",
+      "code": "g20.received",
+      "shortLabel": "Received a digital payment",
+      "category": "digital",
+      "higherIsBetter": true
+    },
+    {
+      "id": "digitalMerchantPayment",
+      "code": "merchant.pay",
+      "shortLabel": "Digital merchant payment",
+      "category": "digital",
+      "higherIsBetter": true
+    },
+    {
+      "id": "onlineBillPayment",
+      "code": "fin26a",
+      "shortLabel": "Paid bills by phone or internet",
+      "category": "digital",
+      "higherIsBetter": true
+    },
+    {
+      "id": "onlinePurchase",
+      "code": "fin26b",
+      "shortLabel": "Bought something online",
+      "category": "digital",
+      "higherIsBetter": true
+    },
+    {
+      "id": "wagesIntoAccount",
+      "code": "fin32.acc",
+      "shortLabel": "Wages received into an account",
+      "category": "payments",
+      "higherIsBetter": true
+    },
+    {
+      "id": "govTransferIntoAccount",
+      "code": "fin37.38.39.acc",
+      "shortLabel": "Government transfer into an account",
+      "category": "payments",
+      "higherIsBetter": true
+    },
+
+    {
+      "id": "savedAny",
+      "code": "save.any.t.d",
+      "shortLabel": "Saved any money",
+      "category": "savings",
+      "higherIsBetter": true
+    },
+    {
+      "id": "formalSavings",
+      "code": "fin17a.17a1.d",
+      "shortLabel": "Formal savings",
+      "category": "savings",
+      "higherIsBetter": true,
+      "featured": true
+    },
+    {
+      "id": "savedAtFI",
+      "code": "fin17a",
+      "shortLabel": "Saved at a financial institution",
+      "category": "savings",
+      "higherIsBetter": true
+    },
+    {
+      "id": "savedMobileMoney",
+      "code": "fin17b",
+      "shortLabel": "Saved using mobile money",
+      "category": "savings",
+      "higherIsBetter": true
+    },
+    {
+      "id": "savedInformal",
+      "code": "fin17c",
+      "shortLabel": "Saved in a savings club or with a person",
+      "category": "savings",
+      "higherIsBetter": null
+    },
+    {
+      "id": "savedOldAge",
+      "code": "fin17f",
+      "shortLabel": "Saved for old age",
+      "category": "savings",
+      "higherIsBetter": true
+    },
+
+    {
+      "id": "borrowedAny",
+      "code": "borrow.any.t.d",
+      "shortLabel": "Borrowed any money",
+      "category": "borrowing",
+      "higherIsBetter": null
+    },
+    {
+      "id": "formalBorrowing",
+      "code": "fin22a.22a1.22g.d",
+      "shortLabel": "Formal borrowing",
+      "category": "borrowing",
+      "higherIsBetter": null,
+      "featured": true
+    },
+    {
+      "id": "borrowedFromFI",
+      "code": "fin22a",
+      "shortLabel": "Borrowed from a financial institution",
+      "category": "borrowing",
+      "higherIsBetter": null
+    },
+    {
+      "id": "borrowedMobileMoney",
+      "code": "fin22a_1",
+      "shortLabel": "Borrowed from a mobile money provider",
+      "category": "borrowing",
+      "higherIsBetter": null
+    },
+    {
+      "id": "borrowedFamily",
+      "code": "fin22b",
+      "shortLabel": "Borrowed from family or friends",
+      "category": "borrowing",
+      "higherIsBetter": null
+    },
+    {
+      "id": "borrowedSavingsClub",
+      "code": "fin22c",
+      "shortLabel": "Borrowed from a savings club",
+      "category": "borrowing",
+      "higherIsBetter": null
+    },
+    {
+      "id": "borrowedForBusiness",
+      "code": "fin22e",
+      "shortLabel": "Borrowed for a business",
+      "category": "borrowing",
+      "higherIsBetter": null
+    },
+    {
+      "id": "borrowedForHealth",
+      "code": "fin22d",
+      "shortLabel": "Borrowed for health or medical purposes",
+      "category": "borrowing",
+      "higherIsBetter": null
+    },
+
+    {
+      "id": "emergencyFundsPossible",
+      "code": "fin24aP",
+      "shortLabel": "Could raise emergency funds in 30 days",
+      "category": "resilience",
+      "higherIsBetter": true
+    },
+    {
+      "id": "emergencyFundsNotPossible",
+      "code": "fin24aN",
+      "shortLabel": "Could not raise emergency funds",
+      "category": "resilience",
+      "higherIsBetter": false
+    },
+    {
+      "id": "emergencyFromSavings",
+      "code": "fin24sav",
+      "shortLabel": "Emergency funds mainly from savings",
+      "category": "resilience",
+      "higherIsBetter": true
+    },
+
+    {
+      "id": "barrierDistance",
+      "code": "fin11a.s",
+      "shortLabel": "Unbanked: too far away",
+      "category": "barriers",
+      "higherIsBetter": false
+    },
+    {
+      "id": "barrierCost",
+      "code": "fin11b.s",
+      "shortLabel": "Unbanked: too expensive",
+      "category": "barriers",
+      "higherIsBetter": false
+    },
+    {
+      "id": "barrierDocuments",
+      "code": "fin11c.s",
+      "shortLabel": "Unbanked: lack of documents",
+      "category": "barriers",
+      "higherIsBetter": false
+    },
+    {
+      "id": "barrierTrust",
+      "code": "fin11f.s",
+      "shortLabel": "Unbanked: lack of trust",
+      "category": "barriers",
+      "higherIsBetter": false
+    },
+    {
+      "id": "barrierFunds",
+      "code": "fin11d.s",
+      "shortLabel": "Unbanked: insufficient funds",
+      "category": "barriers",
+      "higherIsBetter": false
+    },
+    {
+      "id": "barrierFamily",
+      "code": "fin11e.s",
+      "shortLabel": "Unbanked: family member has one",
+      "category": "barriers",
+      "higherIsBetter": false
+    }
+  ]
+}
