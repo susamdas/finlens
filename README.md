@@ -178,12 +178,12 @@ pages with a keyboard and a screen reader as well.
 FinLens is a static site with no server, database or API keys. Ready-made configuration is
 included for:
 
-| Host                 | Configuration                                                        |
-| -------------------- | -------------------------------------------------------------------- |
-| **Netlify**          | `netlify.toml`, `public/_headers`, `public/_redirects`               |
-| **Vercel**           | `vercel.json`                                                        |
-| **Cloudflare Pages** | `public/_headers`, `public/_redirects`                               |
-| **Self-hosted**      | `Dockerfile` + `deploy/nginx.conf` (unprivileged nginx on port 8080) |
+| Host                   | Configuration                                                        |
+| ---------------------- | -------------------------------------------------------------------- |
+| **Netlify**            | `netlify.toml`, `public/_headers`                                    |
+| **Vercel**             | `vercel.json`                                                        |
+| **Cloudflare Workers** | `wrangler.jsonc`, `public/_headers`                                  |
+| **Self-hosted**        | `Dockerfile` + `deploy/nginx.conf` (unprivileged nginx on port 8080) |
 
 ```bash
 docker build -t finlens .

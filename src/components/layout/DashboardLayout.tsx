@@ -137,6 +137,7 @@ export function DashboardLayout() {
                 Forecasts and the composite index are FinLens-derived and not official World Bank
                 figures.
               </span>
+              <span>© sk_das</span>
             </div>
           </footer>
         </div>

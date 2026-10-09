@@ -1,7 +1,12 @@
-# Netlify: build settings. Headers live in public/_headers, SPA fallback in public/_redirects.
+# Netlify: build settings. Headers live in public/_headers, SPA fallback is defined below.
 [build]
   command = "npm run data:verify && npm run build"
   publish = "dist"
 
 [build.environment]
   NODE_VERSION = "22"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
